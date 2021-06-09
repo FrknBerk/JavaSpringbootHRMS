@@ -2,8 +2,12 @@ package kodlama.hrms.business.abstracts;
 
 import java.util.List;
 
+import kodlama.hrms.core.utilities.results.DataResult;
+import kodlama.hrms.core.utilities.results.Result;
 import kodlama.hrms.entities.concretes.JobTitle;
 
 public interface JobTitleService {
-	List<JobTitle> getAll();
+	DataResult<List<JobTitle>> getAll();
+	Result findByTitleIn(String title);
+	Result add(JobTitle jobTitle);
 }
